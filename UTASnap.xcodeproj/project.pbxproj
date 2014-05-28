@@ -1,0 +1,829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1B3BA7C1936703300684256 /* ParseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B3BA7B1936703300684256 /* ParseInfo.m */; };
+		C1B4FEFE193580B2007D7732 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4FEFD193580B2007D7732 /* FDKeychain.m */; };
+		D305AA97190310CB00AA797B /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D305AA96190310CB00AA797B /* UserProfile.m */; };
+		D305AA9A1903180400AA797B /* Snap.m in Sources */ = {isa = PBXBuildFile; fileRef = D305AA991903180400AA797B /* Snap.m */; };
+		D307E21118F861A900E86132 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D307E20F18F861A900E86132 /* ChangePasswordViewController.m */; };
+		D307E21218F861A900E86132 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D307E21018F861A900E86132 /* ChangePasswordViewController.xib */; };
+		D307E21718F9A60D00E86132 /* SingleImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D307E21518F9A60D00E86132 /* SingleImageViewController.m */; };
+		D307E25E18F9C72A00E86132 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D307E25D18F9C72A00E86132 /* ImageUtils.m */; };
+		D307E6D618EF0E230082D529 /* SubmitUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D307E6D418EF0E230082D529 /* SubmitUploadViewController.m */; };
+		D307E6D718EF0E240082D529 /* SubmitUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D307E6D518EF0E230082D529 /* SubmitUploadViewController.xib */; };
+		D307E79E19005E69000FB4B0 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D307E79D19005E69000FB4B0 /* cat2.jpg */; };
+		D312F13D18F64F9A00D68F19 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F13C18F64F9A00D68F19 /* Parse.framework */; };
+		D312F13F18F64FCD00D68F19 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */; };
+		D312F14118F64FD600D68F19 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14018F64FD600D68F19 /* CFNetwork.framework */; };
+		D312F14318F64FE300D68F19 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14218F64FE300D68F19 /* CoreLocation.framework */; };
+		D312F14518F64FEC00D68F19 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14418F64FEC00D68F19 /* libz.dylib */; };
+		D312F14718F64FF300D68F19 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14618F64FF300D68F19 /* MobileCoreServices.framework */; };
+		D312F14918F64FFB00D68F19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14818F64FFB00D68F19 /* QuartzCore.framework */; };
+		D312F14B18F6500100D68F19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14A18F6500100D68F19 /* Security.framework */; };
+		D312F14D18F6500600D68F19 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14C18F6500600D68F19 /* StoreKit.framework */; };
+		D312F14F18F6500E00D68F19 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14E18F6500E00D68F19 /* SystemConfiguration.framework */; };
+		D31486B21901AF1E00BB8B58 /* ImagesViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D31486B11901AF1E00BB8B58 /* ImagesViewImageCell.m */; };
+		D31486B41901AF3E00BB8B58 /* ImagesViewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31486B31901AF3E00BB8B58 /* ImagesViewImageCell.xib */; };
+		D31486B71901BAF300BB8B58 /* GlobalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D31486B61901BAF300BB8B58 /* GlobalConstants.m */; };
+		D331B65918EDBB38004152DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B65818EDBB38004152DA /* Foundation.framework */; };
+		D331B65B18EDBB38004152DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B65A18EDBB38004152DA /* CoreGraphics.framework */; };
+		D331B65D18EDBB38004152DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B65C18EDBB38004152DA /* UIKit.framework */; };
+		D331B66318EDBB38004152DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D331B66118EDBB38004152DA /* InfoPlist.strings */; };
+		D331B66518EDBB38004152DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B66418EDBB38004152DA /* main.m */; };
+		D331B66918EDBB38004152DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B66818EDBB38004152DA /* AppDelegate.m */; };
+		D331B66B18EDBB38004152DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D331B66A18EDBB38004152DA /* Images.xcassets */; };
+		D331B67218EDBB38004152DA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B67118EDBB38004152DA /* XCTest.framework */; };
+		D331B67318EDBB38004152DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B65818EDBB38004152DA /* Foundation.framework */; };
+		D331B67418EDBB38004152DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331B65C18EDBB38004152DA /* UIKit.framework */; };
+		D331B67C18EDBB38004152DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D331B67A18EDBB38004152DA /* InfoPlist.strings */; };
+		D331B67E18EDBB38004152DA /* UTASnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B67D18EDBB38004152DA /* UTASnapTests.m */; };
+		D331B69C18EDCBF8004152DA /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B69A18EDCBF8004152DA /* UploadViewController.m */; };
+		D331B69D18EDCBF8004152DA /* UploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331B69B18EDCBF8004152DA /* UploadViewController.xib */; };
+		D331B6A318EDCD8D004152DA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6A118EDCD8D004152DA /* LoginViewController.m */; };
+		D331B6A418EDCD8D004152DA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331B6A218EDCD8D004152DA /* LoginViewController.xib */; };
+		D331B6A818EDCD9F004152DA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6A618EDCD9F004152DA /* SignUpViewController.m */; };
+		D331B6A918EDCD9F004152DA /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331B6A718EDCD9F004152DA /* SignUpViewController.xib */; };
+		D331B6B118EDD129004152DA /* ProfileNoSessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6AF18EDD129004152DA /* ProfileNoSessViewController.m */; };
+		D331B6B218EDD129004152DA /* ProfileNoSessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D331B6B018EDD129004152DA /* ProfileNoSessViewController.xib */; };
+		D331B6B618EDD268004152DA /* UploadNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6B518EDD268004152DA /* UploadNavigationViewController.m */; };
+		D331B6BC18EDD333004152DA /* ProfileNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6BB18EDD333004152DA /* ProfileNavigationViewController.m */; };
+		D331B6BF18EDD3AF004152DA /* ImagesNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6BE18EDD3AF004152DA /* ImagesNavigationViewController.m */; };
+		D331B6C318EDD3F6004152DA /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D331B6C218EDD3F6004152DA /* ImagesViewController.m */; };
+		D3E965D018F5D25400777F10 /* snapsdatamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3E965CE18F5D25400777F10 /* snapsdatamodel.xcdatamodeld */; };
+		D3E965D618F5D32000777F10 /* SnapDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E965D518F5D32000777F10 /* SnapDataStore.m */; };
+		D3E965E118F6342C00777F10 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E965DF18F6342C00777F10 /* UserProfileViewController.m */; };
+		D3E965E218F6342C00777F10 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E965E018F6342C00777F10 /* UserProfileViewController.xib */; };
+		DEE779A2190AFCCE00140840 /* FavoriteSnapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE779A0190AFCCE00140840 /* FavoriteSnapsTableViewController.m */; };
+		DEE779A3190AFCCF00140840 /* FavoriteSnapsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE779A1190AFCCE00140840 /* FavoriteSnapsTableViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D331B67518EDBB38004152DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D331B64D18EDBB38004152DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D331B65418EDBB38004152DA;
+			remoteInfo = UTASnap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1B3BA7A1936703300684256 /* ParseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseInfo.h; sourceTree = "<group>"; };
+		C1B3BA7B1936703300684256 /* ParseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseInfo.m; sourceTree = "<group>"; };
+		C1B4FEFC193580B2007D7732 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
+		C1B4FEFD193580B2007D7732 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
+		D305AA95190310CB00AA797B /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
+		D305AA96190310CB00AA797B /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
+		D305AA981903180400AA797B /* Snap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snap.h; sourceTree = "<group>"; };
+		D305AA991903180400AA797B /* Snap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snap.m; sourceTree = "<group>"; };
+		D307E20E18F861A900E86132 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		D307E20F18F861A900E86132 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		D307E21018F861A900E86132 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		D307E21418F9A60D00E86132 /* SingleImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImageViewController.h; sourceTree = "<group>"; };
+		D307E21518F9A60D00E86132 /* SingleImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleImageViewController.m; sourceTree = "<group>"; };
+		D307E25C18F9C72A00E86132 /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		D307E25D18F9C72A00E86132 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
+		D307E6D318EF0E230082D529 /* SubmitUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitUploadViewController.h; sourceTree = "<group>"; };
+		D307E6D418EF0E230082D529 /* SubmitUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitUploadViewController.m; sourceTree = "<group>"; };
+		D307E6D518EF0E230082D529 /* SubmitUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitUploadViewController.xib; sourceTree = "<group>"; };
+		D307E79D19005E69000FB4B0 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat2.jpg; sourceTree = "<group>"; };
+		D312F13C18F64F9A00D68F19 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D312F14018F64FD600D68F19 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D312F14218F64FE300D68F19 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D312F14418F64FEC00D68F19 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D312F14618F64FF300D68F19 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D312F14818F64FFB00D68F19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D312F14A18F6500100D68F19 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D312F14C18F6500600D68F19 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D312F14E18F6500E00D68F19 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D31486B01901AF1E00BB8B58 /* ImagesViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewImageCell.h; sourceTree = "<group>"; };
+		D31486B11901AF1E00BB8B58 /* ImagesViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewImageCell.m; sourceTree = "<group>"; };
+		D31486B31901AF3E00BB8B58 /* ImagesViewImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewImageCell.xib; sourceTree = "<group>"; };
+		D31486B51901BAF300BB8B58 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		D31486B61901BAF300BB8B58 /* GlobalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConstants.m; sourceTree = "<group>"; };
+		D331B65518EDBB38004152DA /* UTASnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTASnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D331B65818EDBB38004152DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D331B65A18EDBB38004152DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D331B65C18EDBB38004152DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D331B66018EDBB38004152DA /* UTASnap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UTASnap-Info.plist"; sourceTree = "<group>"; };
+		D331B66218EDBB38004152DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D331B66418EDBB38004152DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D331B66618EDBB38004152DA /* UTASnap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UTASnap-Prefix.pch"; sourceTree = "<group>"; };
+		D331B66718EDBB38004152DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D331B66818EDBB38004152DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D331B66A18EDBB38004152DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D331B67018EDBB38004152DA /* UTASnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UTASnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D331B67118EDBB38004152DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D331B67918EDBB38004152DA /* UTASnapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UTASnapTests-Info.plist"; sourceTree = "<group>"; };
+		D331B67B18EDBB38004152DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D331B67D18EDBB38004152DA /* UTASnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UTASnapTests.m; sourceTree = "<group>"; };
+		D331B69918EDCBF8004152DA /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		D331B69A18EDCBF8004152DA /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		D331B69B18EDCBF8004152DA /* UploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadViewController.xib; sourceTree = "<group>"; };
+		D331B6A018EDCD8D004152DA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D331B6A118EDCD8D004152DA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D331B6A218EDCD8D004152DA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D331B6A518EDCD9F004152DA /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		D331B6A618EDCD9F004152DA /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		D331B6A718EDCD9F004152DA /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		D331B6AE18EDD129004152DA /* ProfileNoSessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNoSessViewController.h; sourceTree = "<group>"; };
+		D331B6AF18EDD129004152DA /* ProfileNoSessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNoSessViewController.m; sourceTree = "<group>"; };
+		D331B6B018EDD129004152DA /* ProfileNoSessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileNoSessViewController.xib; sourceTree = "<group>"; };
+		D331B6B418EDD268004152DA /* UploadNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadNavigationViewController.h; sourceTree = "<group>"; };
+		D331B6B518EDD268004152DA /* UploadNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadNavigationViewController.m; sourceTree = "<group>"; };
+		D331B6BA18EDD333004152DA /* ProfileNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavigationViewController.h; sourceTree = "<group>"; };
+		D331B6BB18EDD333004152DA /* ProfileNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavigationViewController.m; sourceTree = "<group>"; };
+		D331B6BD18EDD3AF004152DA /* ImagesNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesNavigationViewController.h; sourceTree = "<group>"; };
+		D331B6BE18EDD3AF004152DA /* ImagesNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesNavigationViewController.m; sourceTree = "<group>"; };
+		D331B6C118EDD3F6004152DA /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
+		D331B6C218EDD3F6004152DA /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
+		D3E965CF18F5D25400777F10 /* snapsdatamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = snapsdatamodel.xcdatamodel; sourceTree = "<group>"; };
+		D3E965D418F5D32000777F10 /* SnapDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapDataStore.h; sourceTree = "<group>"; };
+		D3E965D518F5D32000777F10 /* SnapDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapDataStore.m; sourceTree = "<group>"; };
+		D3E965DE18F6342C00777F10 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		D3E965DF18F6342C00777F10 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		D3E965E018F6342C00777F10 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
+		DEE7799F190AFCCE00140840 /* FavoriteSnapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteSnapsTableViewController.h; sourceTree = "<group>"; };
+		DEE779A0190AFCCE00140840 /* FavoriteSnapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteSnapsTableViewController.m; sourceTree = "<group>"; };
+		DEE779A1190AFCCE00140840 /* FavoriteSnapsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteSnapsTableViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D331B65218EDBB38004152DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D312F14F18F6500E00D68F19 /* SystemConfiguration.framework in Frameworks */,
+				D312F14D18F6500600D68F19 /* StoreKit.framework in Frameworks */,
+				D312F14B18F6500100D68F19 /* Security.framework in Frameworks */,
+				D312F14918F64FFB00D68F19 /* QuartzCore.framework in Frameworks */,
+				D312F14718F64FF300D68F19 /* MobileCoreServices.framework in Frameworks */,
+				D312F14518F64FEC00D68F19 /* libz.dylib in Frameworks */,
+				D312F14318F64FE300D68F19 /* CoreLocation.framework in Frameworks */,
+				D331B65B18EDBB38004152DA /* CoreGraphics.framework in Frameworks */,
+				D312F14118F64FD600D68F19 /* CFNetwork.framework in Frameworks */,
+				D312F13F18F64FCD00D68F19 /* AudioToolbox.framework in Frameworks */,
+				D331B65D18EDBB38004152DA /* UIKit.framework in Frameworks */,
+				D312F13D18F64F9A00D68F19 /* Parse.framework in Frameworks */,
+				D331B65918EDBB38004152DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D331B66D18EDBB38004152DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D331B67218EDBB38004152DA /* XCTest.framework in Frameworks */,
+				D331B67418EDBB38004152DA /* UIKit.framework in Frameworks */,
+				D331B67318EDBB38004152DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1B4FEFB1935801C007D7732 /* FDKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4FEFC193580B2007D7732 /* FDKeychain.h */,
+				C1B4FEFD193580B2007D7732 /* FDKeychain.m */,
+			);
+			name = FDKeychain;
+			sourceTree = "<group>";
+		};
+		D307E20C18F85C9D00E86132 /* favoriteSnaps */ = {
+			isa = PBXGroup;
+			children = (
+				DEE7799F190AFCCE00140840 /* FavoriteSnapsTableViewController.h */,
+				DEE779A0190AFCCE00140840 /* FavoriteSnapsTableViewController.m */,
+				DEE779A1190AFCCE00140840 /* FavoriteSnapsTableViewController.xib */,
+			);
+			name = favoriteSnaps;
+			sourceTree = "<group>";
+		};
+		D307E20D18F8619000E86132 /* changePasswordVc */ = {
+			isa = PBXGroup;
+			children = (
+				D307E20E18F861A900E86132 /* ChangePasswordViewController.h */,
+				D307E20F18F861A900E86132 /* ChangePasswordViewController.m */,
+				D307E21018F861A900E86132 /* ChangePasswordViewController.xib */,
+			);
+			name = changePasswordVc;
+			sourceTree = "<group>";
+		};
+		D307E21318F9A5BF00E86132 /* singleimagevc */ = {
+			isa = PBXGroup;
+			children = (
+				D307E21418F9A60D00E86132 /* SingleImageViewController.h */,
+				D307E21518F9A60D00E86132 /* SingleImageViewController.m */,
+			);
+			name = singleimagevc;
+			sourceTree = "<group>";
+		};
+		D307E25B18F9C70E00E86132 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				D307E25C18F9C72A00E86132 /* ImageUtils.h */,
+				D307E25D18F9C72A00E86132 /* ImageUtils.m */,
+				D31486B51901BAF300BB8B58 /* GlobalConstants.h */,
+				D31486B61901BAF300BB8B58 /* GlobalConstants.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		D307E6D218EF0E030082D529 /* submituploadview */ = {
+			isa = PBXGroup;
+			children = (
+				D307E6D318EF0E230082D529 /* SubmitUploadViewController.h */,
+				D307E6D418EF0E230082D529 /* SubmitUploadViewController.m */,
+				D307E6D518EF0E230082D529 /* SubmitUploadViewController.xib */,
+			);
+			name = submituploadview;
+			sourceTree = "<group>";
+		};
+		D30F989319017C85005DA01D /* testimages */ = {
+			isa = PBXGroup;
+			children = (
+				D307E79D19005E69000FB4B0 /* cat2.jpg */,
+			);
+			name = testimages;
+			sourceTree = "<group>";
+		};
+		D31486AF1901AEDF00BB8B58 /* collectionviewcell */ = {
+			isa = PBXGroup;
+			children = (
+				D31486B01901AF1E00BB8B58 /* ImagesViewImageCell.h */,
+				D31486B11901AF1E00BB8B58 /* ImagesViewImageCell.m */,
+				D31486B31901AF3E00BB8B58 /* ImagesViewImageCell.xib */,
+			);
+			name = collectionviewcell;
+			sourceTree = "<group>";
+		};
+		D331B64C18EDBB38004152DA = {
+			isa = PBXGroup;
+			children = (
+				D331B65E18EDBB38004152DA /* UTASnap */,
+				D331B67718EDBB38004152DA /* UTASnapTests */,
+				D331B65718EDBB38004152DA /* Frameworks */,
+				D331B65618EDBB38004152DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D331B65618EDBB38004152DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D331B65518EDBB38004152DA /* UTASnap.app */,
+				D331B67018EDBB38004152DA /* UTASnapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D331B65718EDBB38004152DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D312F14E18F6500E00D68F19 /* SystemConfiguration.framework */,
+				D312F14C18F6500600D68F19 /* StoreKit.framework */,
+				D312F14A18F6500100D68F19 /* Security.framework */,
+				D312F14818F64FFB00D68F19 /* QuartzCore.framework */,
+				D312F14618F64FF300D68F19 /* MobileCoreServices.framework */,
+				D312F14418F64FEC00D68F19 /* libz.dylib */,
+				D312F14218F64FE300D68F19 /* CoreLocation.framework */,
+				D312F14018F64FD600D68F19 /* CFNetwork.framework */,
+				D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */,
+				D312F13C18F64F9A00D68F19 /* Parse.framework */,
+				D331B65818EDBB38004152DA /* Foundation.framework */,
+				D331B65A18EDBB38004152DA /* CoreGraphics.framework */,
+				D331B65C18EDBB38004152DA /* UIKit.framework */,
+				D331B67118EDBB38004152DA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D331B65E18EDBB38004152DA /* UTASnap */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4FEFB1935801C007D7732 /* FDKeychain */,
+				D307E25B18F9C70E00E86132 /* utils */,
+				D3E965CD18F5D0CC00777F10 /* datamodel */,
+				D331B69018EDC801004152DA /* profilevcs */,
+				D331B68C18EDC1B2004152DA /* uploadvcs */,
+				D331B68A18EDC184004152DA /* imagesvcs */,
+				D331B66718EDBB38004152DA /* AppDelegate.h */,
+				D331B66818EDBB38004152DA /* AppDelegate.m */,
+				C1B3BA7A1936703300684256 /* ParseInfo.h */,
+				C1B3BA7B1936703300684256 /* ParseInfo.m */,
+				D331B66A18EDBB38004152DA /* Images.xcassets */,
+				D331B65F18EDBB38004152DA /* Supporting Files */,
+			);
+			path = UTASnap;
+			sourceTree = "<group>";
+		};
+		D331B65F18EDBB38004152DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D331B66018EDBB38004152DA /* UTASnap-Info.plist */,
+				D331B66118EDBB38004152DA /* InfoPlist.strings */,
+				D331B66418EDBB38004152DA /* main.m */,
+				D331B66618EDBB38004152DA /* UTASnap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D331B67718EDBB38004152DA /* UTASnapTests */ = {
+			isa = PBXGroup;
+			children = (
+				D331B67D18EDBB38004152DA /* UTASnapTests.m */,
+				D331B67818EDBB38004152DA /* Supporting Files */,
+			);
+			path = UTASnapTests;
+			sourceTree = "<group>";
+		};
+		D331B67818EDBB38004152DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D331B67918EDBB38004152DA /* UTASnapTests-Info.plist */,
+				D331B67A18EDBB38004152DA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D331B68A18EDC184004152DA /* imagesvcs */ = {
+			isa = PBXGroup;
+			children = (
+				D31486AF1901AEDF00BB8B58 /* collectionviewcell */,
+				D30F989319017C85005DA01D /* testimages */,
+				D307E21318F9A5BF00E86132 /* singleimagevc */,
+				D331B6C018EDD3E0004152DA /* imagescollection */,
+				D331B6BD18EDD3AF004152DA /* ImagesNavigationViewController.h */,
+				D331B6BE18EDD3AF004152DA /* ImagesNavigationViewController.m */,
+			);
+			name = imagesvcs;
+			sourceTree = "<group>";
+		};
+		D331B68C18EDC1B2004152DA /* uploadvcs */ = {
+			isa = PBXGroup;
+			children = (
+				D307E6D218EF0E030082D529 /* submituploadview */,
+				D331B6B318EDD23E004152DA /* mainscreen */,
+				D331B6B418EDD268004152DA /* UploadNavigationViewController.h */,
+				D331B6B518EDD268004152DA /* UploadNavigationViewController.m */,
+			);
+			name = uploadvcs;
+			sourceTree = "<group>";
+		};
+		D331B69018EDC801004152DA /* profilevcs */ = {
+			isa = PBXGroup;
+			children = (
+				D307E20D18F8619000E86132 /* changePasswordVc */,
+				D307E20C18F85C9D00E86132 /* favoriteSnaps */,
+				D3E965DD18F6341100777F10 /* userprofile */,
+				D331B6AD18EDD101004152DA /* notLoggedInVc */,
+				D331B69F18EDCD6C004152DA /* signupvc */,
+				D331B69E18EDCD66004152DA /* loginvc */,
+				D331B6BA18EDD333004152DA /* ProfileNavigationViewController.h */,
+				D331B6BB18EDD333004152DA /* ProfileNavigationViewController.m */,
+			);
+			name = profilevcs;
+			sourceTree = "<group>";
+		};
+		D331B69E18EDCD66004152DA /* loginvc */ = {
+			isa = PBXGroup;
+			children = (
+				D331B6A018EDCD8D004152DA /* LoginViewController.h */,
+				D331B6A118EDCD8D004152DA /* LoginViewController.m */,
+				D331B6A218EDCD8D004152DA /* LoginViewController.xib */,
+			);
+			name = loginvc;
+			sourceTree = "<group>";
+		};
+		D331B69F18EDCD6C004152DA /* signupvc */ = {
+			isa = PBXGroup;
+			children = (
+				D331B6A518EDCD9F004152DA /* SignUpViewController.h */,
+				D331B6A618EDCD9F004152DA /* SignUpViewController.m */,
+				D331B6A718EDCD9F004152DA /* SignUpViewController.xib */,
+			);
+			name = signupvc;
+			sourceTree = "<group>";
+		};
+		D331B6AD18EDD101004152DA /* notLoggedInVc */ = {
+			isa = PBXGroup;
+			children = (
+				D331B6AE18EDD129004152DA /* ProfileNoSessViewController.h */,
+				D331B6AF18EDD129004152DA /* ProfileNoSessViewController.m */,
+				D331B6B018EDD129004152DA /* ProfileNoSessViewController.xib */,
+			);
+			name = notLoggedInVc;
+			sourceTree = "<group>";
+		};
+		D331B6B318EDD23E004152DA /* mainscreen */ = {
+			isa = PBXGroup;
+			children = (
+				D331B69918EDCBF8004152DA /* UploadViewController.h */,
+				D331B69A18EDCBF8004152DA /* UploadViewController.m */,
+				D331B69B18EDCBF8004152DA /* UploadViewController.xib */,
+			);
+			name = mainscreen;
+			sourceTree = "<group>";
+		};
+		D331B6C018EDD3E0004152DA /* imagescollection */ = {
+			isa = PBXGroup;
+			children = (
+				D331B6C118EDD3F6004152DA /* ImagesViewController.h */,
+				D331B6C218EDD3F6004152DA /* ImagesViewController.m */,
+			);
+			name = imagescollection;
+			sourceTree = "<group>";
+		};
+		D3E965CD18F5D0CC00777F10 /* datamodel */ = {
+			isa = PBXGroup;
+			children = (
+				D3E965CE18F5D25400777F10 /* snapsdatamodel.xcdatamodeld */,
+				D3E965D418F5D32000777F10 /* SnapDataStore.h */,
+				D3E965D518F5D32000777F10 /* SnapDataStore.m */,
+				D305AA95190310CB00AA797B /* UserProfile.h */,
+				D305AA96190310CB00AA797B /* UserProfile.m */,
+				D305AA981903180400AA797B /* Snap.h */,
+				D305AA991903180400AA797B /* Snap.m */,
+			);
+			name = datamodel;
+			sourceTree = "<group>";
+		};
+		D3E965DD18F6341100777F10 /* userprofile */ = {
+			isa = PBXGroup;
+			children = (
+				D3E965DE18F6342C00777F10 /* UserProfileViewController.h */,
+				D3E965DF18F6342C00777F10 /* UserProfileViewController.m */,
+				D3E965E018F6342C00777F10 /* UserProfileViewController.xib */,
+			);
+			name = userprofile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D331B65418EDBB38004152DA /* UTASnap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D331B68118EDBB38004152DA /* Build configuration list for PBXNativeTarget "UTASnap" */;
+			buildPhases = (
+				D331B65118EDBB38004152DA /* Sources */,
+				D331B65218EDBB38004152DA /* Frameworks */,
+				D331B65318EDBB38004152DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UTASnap;
+			productName = UTASnap;
+			productReference = D331B65518EDBB38004152DA /* UTASnap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D331B66F18EDBB38004152DA /* UTASnapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D331B68418EDBB38004152DA /* Build configuration list for PBXNativeTarget "UTASnapTests" */;
+			buildPhases = (
+				D331B66C18EDBB38004152DA /* Sources */,
+				D331B66D18EDBB38004152DA /* Frameworks */,
+				D331B66E18EDBB38004152DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D331B67618EDBB38004152DA /* PBXTargetDependency */,
+			);
+			name = UTASnapTests;
+			productName = UTASnapTests;
+			productReference = D331B67018EDBB38004152DA /* UTASnapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D331B64D18EDBB38004152DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Appcoda;
+				TargetAttributes = {
+					D331B66F18EDBB38004152DA = {
+						TestTargetID = D331B65418EDBB38004152DA;
+					};
+				};
+			};
+			buildConfigurationList = D331B65018EDBB38004152DA /* Build configuration list for PBXProject "UTASnap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D331B64C18EDBB38004152DA;
+			productRefGroup = D331B65618EDBB38004152DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D331B65418EDBB38004152DA /* UTASnap */,
+				D331B66F18EDBB38004152DA /* UTASnapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D331B65318EDBB38004152DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D307E6D718EF0E240082D529 /* SubmitUploadViewController.xib in Resources */,
+				D307E79E19005E69000FB4B0 /* cat2.jpg in Resources */,
+				D331B6A418EDCD8D004152DA /* LoginViewController.xib in Resources */,
+				D31486B41901AF3E00BB8B58 /* ImagesViewImageCell.xib in Resources */,
+				D331B6B218EDD129004152DA /* ProfileNoSessViewController.xib in Resources */,
+				DEE779A3190AFCCF00140840 /* FavoriteSnapsTableViewController.xib in Resources */,
+				D331B69D18EDCBF8004152DA /* UploadViewController.xib in Resources */,
+				D331B66318EDBB38004152DA /* InfoPlist.strings in Resources */,
+				D3E965E218F6342C00777F10 /* UserProfileViewController.xib in Resources */,
+				D331B6A918EDCD9F004152DA /* SignUpViewController.xib in Resources */,
+				D307E21218F861A900E86132 /* ChangePasswordViewController.xib in Resources */,
+				D331B66B18EDBB38004152DA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D331B66E18EDBB38004152DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D331B67C18EDBB38004152DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D331B65118EDBB38004152DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D331B6BF18EDD3AF004152DA /* ImagesNavigationViewController.m in Sources */,
+				D307E21118F861A900E86132 /* ChangePasswordViewController.m in Sources */,
+				D3E965D618F5D32000777F10 /* SnapDataStore.m in Sources */,
+				D305AA9A1903180400AA797B /* Snap.m in Sources */,
+				D31486B21901AF1E00BB8B58 /* ImagesViewImageCell.m in Sources */,
+				D305AA97190310CB00AA797B /* UserProfile.m in Sources */,
+				D331B66918EDBB38004152DA /* AppDelegate.m in Sources */,
+				D331B66518EDBB38004152DA /* main.m in Sources */,
+				D31486B71901BAF300BB8B58 /* GlobalConstants.m in Sources */,
+				D3E965E118F6342C00777F10 /* UserProfileViewController.m in Sources */,
+				D331B6B118EDD129004152DA /* ProfileNoSessViewController.m in Sources */,
+				D307E21718F9A60D00E86132 /* SingleImageViewController.m in Sources */,
+				D331B6A318EDCD8D004152DA /* LoginViewController.m in Sources */,
+				C1B3BA7C1936703300684256 /* ParseInfo.m in Sources */,
+				D331B6BC18EDD333004152DA /* ProfileNavigationViewController.m in Sources */,
+				D307E6D618EF0E230082D529 /* SubmitUploadViewController.m in Sources */,
+				D331B6C318EDD3F6004152DA /* ImagesViewController.m in Sources */,
+				D331B69C18EDCBF8004152DA /* UploadViewController.m in Sources */,
+				DEE779A2190AFCCE00140840 /* FavoriteSnapsTableViewController.m in Sources */,
+				D331B6A818EDCD9F004152DA /* SignUpViewController.m in Sources */,
+				D307E25E18F9C72A00E86132 /* ImageUtils.m in Sources */,
+				D331B6B618EDD268004152DA /* UploadNavigationViewController.m in Sources */,
+				C1B4FEFE193580B2007D7732 /* FDKeychain.m in Sources */,
+				D3E965D018F5D25400777F10 /* snapsdatamodel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D331B66C18EDBB38004152DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D331B67E18EDBB38004152DA /* UTASnapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D331B67618EDBB38004152DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D331B65418EDBB38004152DA /* UTASnap */;
+			targetProxy = D331B67518EDBB38004152DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D331B66118EDBB38004152DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D331B66218EDBB38004152DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D331B67A18EDBB38004152DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D331B67B18EDBB38004152DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D331B67F18EDBB38004152DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D331B68018EDBB38004152DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D331B68218EDBB38004152DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UTASnap/UTASnap-Prefix.pch";
+				INFOPLIST_FILE = "UTASnap/UTASnap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D331B68318EDBB38004152DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UTASnap/UTASnap-Prefix.pch";
+				INFOPLIST_FILE = "UTASnap/UTASnap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D331B68518EDBB38004152DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UTASnap.app/UTASnap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UTASnap/UTASnap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UTASnapTests/UTASnapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D331B68618EDBB38004152DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UTASnap.app/UTASnap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UTASnap/UTASnap-Prefix.pch";
+				INFOPLIST_FILE = "UTASnapTests/UTASnapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D331B65018EDBB38004152DA /* Build configuration list for PBXProject "UTASnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D331B67F18EDBB38004152DA /* Debug */,
+				D331B68018EDBB38004152DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D331B68118EDBB38004152DA /* Build configuration list for PBXNativeTarget "UTASnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D331B68218EDBB38004152DA /* Debug */,
+				D331B68318EDBB38004152DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D331B68418EDBB38004152DA /* Build configuration list for PBXNativeTarget "UTASnapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D331B68518EDBB38004152DA /* Debug */,
+				D331B68618EDBB38004152DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3E965CE18F5D25400777F10 /* snapsdatamodel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3E965CF18F5D25400777F10 /* snapsdatamodel.xcdatamodel */,
+			);
+			currentVersion = D3E965CF18F5D25400777F10 /* snapsdatamodel.xcdatamodel */;
+			path = snapsdatamodel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D331B64D18EDBB38004152DA /* Project object */;
+}
