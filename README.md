@@ -25,5 +25,7 @@ that returns the parse key information.
 Also make sure when you push, these are in the .gitignore file:
 
 UTASnap/ParseInfo.h
+
 UTASnap/ParseInfo.m
+
 Parse.framework/*
