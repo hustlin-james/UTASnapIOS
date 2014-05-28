@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6B5B393F-4F31-4B5B-864C-5B26F36F671F</string>
+	<string>89198A19-647D-4591-A0E5-F9EAB0F6A336</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UTASnap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E58DF64C-C83B-4AC5-8FEC-72BE0F26F887</key>
-		<string>https://github.com/UTA-Mobi/UTASnap.git</string>
+		<key>D022F56A-2CEE-4458-9886-34974DC995E2</key>
+		<string>https://github.com/hustlin-james/UTASnapIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UTASnap.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E58DF64C-C83B-4AC5-8FEC-72BE0F26F887</key>
+		<key>D022F56A-2CEE-4458-9886-34974DC995E2</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/UTA-Mobi/UTASnap.git</string>
+	<string>https://github.com/hustlin-james/UTASnapIOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E58DF64C-C83B-4AC5-8FEC-72BE0F26F887</string>
+	<string>D022F56A-2CEE-4458-9886-34974DC995E2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E58DF64C-C83B-4AC5-8FEC-72BE0F26F887</string>
+			<string>D022F56A-2CEE-4458-9886-34974DC995E2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>UTASnap</string>
+			<string>UTASnapIOS</string>
 		</dict>
 	</array>
 </dict>
