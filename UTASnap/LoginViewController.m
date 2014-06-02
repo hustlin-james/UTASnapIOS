@@ -129,7 +129,7 @@
     } else {
         // The login failed. Check error to see why.
         NSLog(@"error loggin user: %@", [error localizedDescription]);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"error logging in.  Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"error logging in." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
     

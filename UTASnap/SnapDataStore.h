@@ -19,6 +19,6 @@
 - (UserProfile *)createUser;
 - (void) deleteOtherUsers;
 
--(void)getSnapImagesByNumCookiesAndBy:(int)offset WithCallBack:(SEL)myFunction andWith: (id)target;
+-(void)getSnapImagesByNumCookiesAndByOffset:(int)offset andByLimit: (int)limit WithCallBack:(SEL)myFunction andWithTarget: (id)target;
 
 @end

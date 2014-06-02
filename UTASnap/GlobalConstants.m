@@ -10,7 +10,7 @@
 
 @implementation GlobalConstants
 
-float const IMAGE_CELL_WIDTH = 100.0;
-float const IMAGE_CELL_HEIGHT = 100.0;
+float const IMAGE_CELL_WIDTH = 150.0;
+float const IMAGE_CELL_HEIGHT = 150.0;
 
 @end

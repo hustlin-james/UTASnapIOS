@@ -26,7 +26,6 @@
     
     if(self){
         //self.navigationBar.tintColor = [UIColor orangeColor];
-        
         UIColor *navBarColor =[UIColor colorWithRed:0.40 green:0.67 blue:0.91 alpha:1.0];
         [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
         [self.navigationBar setBarTintColor:navBarColor];

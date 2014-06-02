@@ -7,6 +7,12 @@
 //
 
 #import "FavoriteSnapsTableViewController.h"
+#import "FavoriteSnapTableViewCell.h"
+#import "Snap.h"
+#import "UserProfile.h"
+#import "SnapDataStore.h"
+#import "SingleImageViewController.h"
+#import <Parse/Parse.h>
 
 @interface FavoriteSnapsTableViewController ()
 
@@ -20,16 +26,18 @@
     
     self.navigationItem.title = @"Favorite Snaps";
     
-    dataArray = [NSMutableArray new];
-    NSArray *firstItemsArray = [[NSArray alloc] initWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
-    NSDictionary *firstItemsArrayDict = [NSDictionary dictionaryWithObject:firstItemsArray forKey:@"data"];
-    [dataArray addObject:firstItemsArrayDict];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // Load the NIB file
+    UINib *nib = [UINib nibWithNibName:@"FavoriteSnapCell" bundle:nil];
+    
+    // Register this NIB, which contains the cell
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:@"FavoriteSnapCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,89 +51,60 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [dataArray count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSDictionary *dictionary = [dataArray objectAtIndex:section];
-    NSArray *array = [dictionary objectForKey:@"data"];
-    return [array count];
+    return [self.favoriteSnaps count];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PFObject *o = [self.favoriteSnaps objectAtIndex:indexPath.row];
+    
+    Snap *s = [Snap new];
+    s.title = o[@"title"];
+    s.description = o[@"description"];
+    s.numCookies = [o[@"numCookies"] intValue];
+    s.publisherUsername = o[@"publisherUsername"];
+    s.snapPFObject = [self.favoriteSnaps objectAtIndex:indexPath.row];
+    
+    SnapDataStore *snapData = [SnapDataStore sharedStore];
+    UserProfile *user = [snapData user];
+    
+    PFFile *imageFile = o[@"imageFile"];
+    
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        //TODO
+        if(!error){
+            NSLog(@"retrieving image data");
+            UIImage *image = [UIImage imageWithData:data];
+            s.snapImage = image;
+            SingleImageViewController *singleImageVc = [SingleImageViewController new];
+            singleImageVc.s = s;
+            singleImageVc.profile = user;
+            [self presentViewController:singleImageVc animated:YES completion:nil];
+            
+        }else{
+            NSLog(@"image data retrieval error");
+            NSString *errorStr = [error localizedDescription];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: errorStr delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    NSDictionary *dictionary = [dataArray objectAtIndex:indexPath.section];
-    NSArray *array = [dictionary objectForKey:@"data"];
-    NSString *cellValue = [array objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
-    
+    FavoriteSnapTableViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:@"FavoriteSnapCell" forIndexPath:indexPath];
+    PFObject *o = [self.favoriteSnaps objectAtIndex:indexPath.row];
+    cell.titleTextLbl.text = o[@"title"];
+    cell.descriptionTextlbl.text = o[@"description"];
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
 
 @end

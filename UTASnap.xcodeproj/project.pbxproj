@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1AB1A9D1938F4A800C8D093 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB1A9C1938F4A800C8D093 /* Parse.framework */; };
+		C1AB1AA019391B6800C8D093 /* a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1AB1A9F19391B6800C8D093 /* a.jpg */; };
 		C1B3BA81193674A700684256 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B3BA80193674A700684256 /* Parse.framework */; };
 		C1B3BA84193674B600684256 /* ParseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B3BA83193674B600684256 /* ParseInfo.m */; };
+		C1B3BA87193684E900684256 /* FavoriteSnapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1B3BA86193684E900684256 /* FavoriteSnapCell.xib */; };
+		C1B3BA8A1936850000684256 /* FavoriteSnapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B3BA891936850000684256 /* FavoriteSnapTableViewCell.m */; };
 		C1B4FEFE193580B2007D7732 /* FDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4FEFD193580B2007D7732 /* FDKeychain.m */; };
 		D305AA97190310CB00AA797B /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = D305AA96190310CB00AA797B /* UserProfile.m */; };
 		D305AA9A1903180400AA797B /* Snap.m in Sources */ = {isa = PBXBuildFile; fileRef = D305AA991903180400AA797B /* Snap.m */; };
@@ -19,7 +23,6 @@
 		D307E6D618EF0E230082D529 /* SubmitUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D307E6D418EF0E230082D529 /* SubmitUploadViewController.m */; };
 		D307E6D718EF0E240082D529 /* SubmitUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D307E6D518EF0E230082D529 /* SubmitUploadViewController.xib */; };
 		D307E79E19005E69000FB4B0 /* cat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D307E79D19005E69000FB4B0 /* cat2.jpg */; };
-		D312F13D18F64F9A00D68F19 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F13C18F64F9A00D68F19 /* Parse.framework */; };
 		D312F13F18F64FCD00D68F19 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */; };
 		D312F14118F64FD600D68F19 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14018F64FD600D68F19 /* CFNetwork.framework */; };
 		D312F14318F64FE300D68F19 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312F14218F64FE300D68F19 /* CoreLocation.framework */; };
@@ -75,9 +78,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1AB1A9C1938F4A800C8D093 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		C1AB1A9F19391B6800C8D093 /* a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = a.jpg; sourceTree = "<group>"; };
 		C1B3BA80193674A700684256 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		C1B3BA82193674B600684256 /* ParseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseInfo.h; sourceTree = "<group>"; };
 		C1B3BA83193674B600684256 /* ParseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseInfo.m; sourceTree = "<group>"; };
+		C1B3BA86193684E900684256 /* FavoriteSnapCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteSnapCell.xib; sourceTree = "<group>"; };
+		C1B3BA881936850000684256 /* FavoriteSnapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteSnapTableViewCell.h; sourceTree = "<group>"; };
+		C1B3BA891936850000684256 /* FavoriteSnapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteSnapTableViewCell.m; sourceTree = "<group>"; };
 		C1B4FEFC193580B2007D7732 /* FDKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDKeychain.h; sourceTree = "<group>"; };
 		C1B4FEFD193580B2007D7732 /* FDKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDKeychain.m; sourceTree = "<group>"; };
 		D305AA95190310CB00AA797B /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
@@ -95,7 +103,6 @@
 		D307E6D418EF0E230082D529 /* SubmitUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitUploadViewController.m; sourceTree = "<group>"; };
 		D307E6D518EF0E230082D529 /* SubmitUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitUploadViewController.xib; sourceTree = "<group>"; };
 		D307E79D19005E69000FB4B0 /* cat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat2.jpg; sourceTree = "<group>"; };
-		D312F13C18F64F9A00D68F19 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D312F14018F64FD600D68F19 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D312F14218F64FE300D68F19 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -172,9 +179,9 @@
 				D331B65B18EDBB38004152DA /* CoreGraphics.framework in Frameworks */,
 				D312F14118F64FD600D68F19 /* CFNetwork.framework in Frameworks */,
 				D312F13F18F64FCD00D68F19 /* AudioToolbox.framework in Frameworks */,
+				C1AB1A9D1938F4A800C8D093 /* Parse.framework in Frameworks */,
 				C1B3BA81193674A700684256 /* Parse.framework in Frameworks */,
 				D331B65D18EDBB38004152DA /* UIKit.framework in Frameworks */,
-				D312F13D18F64F9A00D68F19 /* Parse.framework in Frameworks */,
 				D331B65918EDBB38004152DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +199,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1AB1A9E19391B0000C8D093 /* testimages */ = {
+			isa = PBXGroup;
+			children = (
+				C1AB1A9F19391B6800C8D093 /* a.jpg */,
+			);
+			name = testimages;
+			sourceTree = "<group>";
+		};
+		C1AEE1001937D7A700A2E4C2 /* imagescache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = imagescache;
+			sourceTree = "<group>";
+		};
+		C1B3BA851936837C00684256 /* favoritesViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3BA86193684E900684256 /* FavoriteSnapCell.xib */,
+				C1B3BA881936850000684256 /* FavoriteSnapTableViewCell.h */,
+				C1B3BA891936850000684256 /* FavoriteSnapTableViewCell.m */,
+			);
+			name = favoritesViewCell;
+			sourceTree = "<group>";
+		};
 		C1B4FEFB1935801C007D7732 /* FDKeychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +236,7 @@
 		D307E20C18F85C9D00E86132 /* favoriteSnaps */ = {
 			isa = PBXGroup;
 			children = (
+				C1B3BA851936837C00684256 /* favoritesViewCell */,
 				DEE7799F190AFCCE00140840 /* FavoriteSnapsTableViewController.h */,
 				DEE779A0190AFCCE00140840 /* FavoriteSnapsTableViewController.m */,
 				DEE779A1190AFCCE00140840 /* FavoriteSnapsTableViewController.xib */,
@@ -272,7 +305,6 @@
 		D331B64C18EDBB38004152DA = {
 			isa = PBXGroup;
 			children = (
-				C1B3BA80193674A700684256 /* Parse.framework */,
 				D331B65E18EDBB38004152DA /* UTASnap */,
 				D331B67718EDBB38004152DA /* UTASnapTests */,
 				D331B65718EDBB38004152DA /* Frameworks */,
@@ -292,6 +324,8 @@
 		D331B65718EDBB38004152DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1B3BA80193674A700684256 /* Parse.framework */,
+				C1AB1A9C1938F4A800C8D093 /* Parse.framework */,
 				D312F14E18F6500E00D68F19 /* SystemConfiguration.framework */,
 				D312F14C18F6500600D68F19 /* StoreKit.framework */,
 				D312F14A18F6500100D68F19 /* Security.framework */,
@@ -301,7 +335,6 @@
 				D312F14218F64FE300D68F19 /* CoreLocation.framework */,
 				D312F14018F64FD600D68F19 /* CFNetwork.framework */,
 				D312F13E18F64FCD00D68F19 /* AudioToolbox.framework */,
-				D312F13C18F64F9A00D68F19 /* Parse.framework */,
 				D331B65818EDBB38004152DA /* Foundation.framework */,
 				D331B65A18EDBB38004152DA /* CoreGraphics.framework */,
 				D331B65C18EDBB38004152DA /* UIKit.framework */,
@@ -313,6 +346,8 @@
 		D331B65E18EDBB38004152DA /* UTASnap */ = {
 			isa = PBXGroup;
 			children = (
+				C1AB1A9E19391B0000C8D093 /* testimages */,
+				C1AEE1001937D7A700A2E4C2 /* imagescache */,
 				C1B4FEFB1935801C007D7732 /* FDKeychain */,
 				D307E25B18F9C70E00E86132 /* utils */,
 				D3E965CD18F5D0CC00777F10 /* datamodel */,
@@ -548,12 +583,14 @@
 				D307E6D718EF0E240082D529 /* SubmitUploadViewController.xib in Resources */,
 				D307E79E19005E69000FB4B0 /* cat2.jpg in Resources */,
 				D331B6A418EDCD8D004152DA /* LoginViewController.xib in Resources */,
+				C1B3BA87193684E900684256 /* FavoriteSnapCell.xib in Resources */,
 				D31486B41901AF3E00BB8B58 /* ImagesViewImageCell.xib in Resources */,
 				D331B6B218EDD129004152DA /* ProfileNoSessViewController.xib in Resources */,
 				DEE779A3190AFCCF00140840 /* FavoriteSnapsTableViewController.xib in Resources */,
 				D331B69D18EDCBF8004152DA /* UploadViewController.xib in Resources */,
 				D331B66318EDBB38004152DA /* InfoPlist.strings in Resources */,
 				D3E965E218F6342C00777F10 /* UserProfileViewController.xib in Resources */,
+				C1AB1AA019391B6800C8D093 /* a.jpg in Resources */,
 				D331B6A918EDCD9F004152DA /* SignUpViewController.xib in Resources */,
 				D307E21218F861A900E86132 /* ChangePasswordViewController.xib in Resources */,
 				D331B66B18EDBB38004152DA /* Images.xcassets in Resources */,
@@ -584,6 +621,7 @@
 				D331B66918EDBB38004152DA /* AppDelegate.m in Sources */,
 				D331B66518EDBB38004152DA /* main.m in Sources */,
 				D31486B71901BAF300BB8B58 /* GlobalConstants.m in Sources */,
+				C1B3BA8A1936850000684256 /* FavoriteSnapTableViewCell.m in Sources */,
 				D3E965E118F6342C00777F10 /* UserProfileViewController.m in Sources */,
 				D331B6B118EDD129004152DA /* ProfileNoSessViewController.m in Sources */,
 				D307E21718F9A60D00E86132 /* SingleImageViewController.m in Sources */,

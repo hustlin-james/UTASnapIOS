@@ -135,11 +135,12 @@
     }
 }
 
--(void)getSnapImagesByNumCookiesAndBy:(int)offset WithCallBack:(SEL)myFunction andWith: (id)target{
+-(void)getSnapImagesByNumCookiesAndByOffset:(int)offset andByLimit: (int)limit WithCallBack:(SEL)myFunction andWithTarget: (id)target{
     
     PFQuery *query = [PFQuery queryWithClassName:@"Snap"];
     [query orderByDescending:@"numCookies"];
     query.skip = offset;
+    query.limit = limit;
     
     [query findObjectsInBackgroundWithTarget:target selector:myFunction];
 }

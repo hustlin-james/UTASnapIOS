@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.cellImage.image = [UIImage imageNamed:@"a.jpg"];
     }
     return self;
 }

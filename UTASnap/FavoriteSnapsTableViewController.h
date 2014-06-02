@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoriteSnapsTableViewController : UITableViewController
-{
-    NSMutableArray *dataArray;
-}
+
+@property (nonatomic) NSArray *favoriteSnaps;
+
 @end

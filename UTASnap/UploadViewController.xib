@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsH-Iw-8hW">
-                    <rect key="frame" x="110" y="157" width="100" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsH-Iw-8hW">
+                    <rect key="frame" x="110" y="150" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.65490196079999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,7 +28,7 @@
                         <action selector="cameraClicked:" destination="-1" eventType="touchUpInside" id="VWn-yk-EfQ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zi-eD-nJS">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zi-eD-nJS">
                     <rect key="frame" x="110" y="200" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.40000000000000002" green="0.65490196079999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,6 +42,10 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="RsH-Iw-8hW" secondAttribute="centerX" id="86x-td-ukZ"/>
+                <constraint firstAttribute="centerX" secondItem="4Zi-eD-nJS" secondAttribute="centerX" id="UVg-Zd-XTX"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

@@ -200,6 +200,7 @@
                 
                 
                 FavoriteSnapsTableViewController *vc = [FavoriteSnapsTableViewController new];
+                vc.favoriteSnaps = objects;
                 [self.navigationController pushViewController:vc animated:YES];
                 //[self.navigationController setViewControllers: [NSArray arrayWithObject:vc] animated:YES];
                 

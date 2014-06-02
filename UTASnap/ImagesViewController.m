@@ -16,9 +16,13 @@
 #import "UserProfile.h"
 #import <Parse/Parse.h>
 
-@interface ImagesViewController ()
+#define NUM_CELLS_PER_PAGE 10
 
-@property (nonatomic) NSMutableArray *mySnaps;
+@interface ImagesViewController (){
+    int currentPage;
+}
+
+@property (nonatomic,strong) NSMutableArray *mySnaps;
 @property (nonatomic, weak) UIRefreshControl *refreshControl;
 
 @property (nonatomic) UserProfile *profile;
@@ -32,7 +36,13 @@
     self = [super initWithCollectionViewLayout:flow];
     if(self){
         self.navigationItem.title = @"Snaps";
-        self.mySnaps = [[NSMutableArray alloc] init];
+        //self.mySnaps = [[NSMutableArray alloc] init];
+        self.mySnaps = [NSMutableArray array];
+        
+        for(int i = 0; i < NUM_CELLS_PER_PAGE; i++){
+            [self.mySnaps addObject:[Snap new]];
+        }
+    
     }
     return self;
 }
@@ -42,14 +52,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    
+    
     UINib *nib = [UINib nibWithNibName:@"ImagesViewImageCell" bundle:[NSBundle mainBundle]];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ImagesViewImageCell"];
+  
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    
     [flowLayout setItemSize:CGSizeMake(IMAGE_CELL_WIDTH, IMAGE_CELL_HEIGHT)];
-    
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    
     [self.collectionView setCollectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
 
@@ -60,17 +75,10 @@
     [self.collectionView addSubview:refreshControl];
     self.collectionView.alwaysBounceVertical = YES;
     self.refreshControl = refreshControl;
-    
    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
-    //Go to parse and fetch the snap objects
-    if([self.mySnaps count] == 0){
-        SnapDataStore *dataStore = [SnapDataStore sharedStore];
-        [dataStore getSnapImagesByNumCookiesAndBy:0 WithCallBack:@selector(getSnapImagesCallBack:error:) andWith:self];
-    }
     
     //check if the user is logged in or not
     SnapDataStore *snapData = [SnapDataStore sharedStore];
@@ -89,12 +97,14 @@
 
 -(void)refreshControlAction{
     NSLog(@"Refereshing the data");
-    
-    [self.mySnaps removeAllObjects];
+    //currentPage = 0;
+    //[self.mySnaps removeAllObjects];
+    /*
     SnapDataStore *dataStore = [SnapDataStore sharedStore];
-    [dataStore getSnapImagesByNumCookiesAndBy:0 WithCallBack:@selector(getSnapImagesCallBack:error:) andWith:self];
+    [dataStore getSnapImagesByNumCookiesAndByOffset:0 andByLimit:NUM_CELLS_PER_PAGE WithCallBack:@selector(getSnapImagesCallBack:error:) andWithTarget:self];
     
     [self.refreshControl endRefreshing];
+     */
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -103,25 +113,48 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    NSLog(@"self.mySnaps: %d", [self.mySnaps count]);
     return [self.mySnaps count];
+    //return 20;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    ImagesViewImageCell *cell = (ImagesViewImageCell *)[self.collectionView dequeueReusableCellWithReuseIdentifier:@"ImagesViewImageCell" forIndexPath:indexPath];
+    NSLog(@"indexPath.item: %d", indexPath.item);
     
-    //setup the cell
-    Snap *s = [self.mySnaps objectAtIndex:indexPath.row];
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.cellImage.image = [ImageUtils createThumbnailFromImage:s.snapImage];
+    int numCells = indexPath.item+1;
+    if( numCells % NUM_CELLS_PER_PAGE == 0){
+        currentPage = numCells / NUM_CELLS_PER_PAGE;
+        
+        NSLog(@"currentPage: %d", currentPage);
+        NSLog(@"self.Snaps.count: %d", self.mySnaps.count);
+        
+        if(self.mySnaps.count <= numCells){
+            NSLog(@"fetching more items");
+            for(int i = 0; i < NUM_CELLS_PER_PAGE; i++){
+                [self.mySnaps addObject:[Snap new]];
+            }
+            [self.collectionView reloadData];
+        }else{
+            //[self.collectionView reloadData];
+        }
+    }
+    
+    ImagesViewImageCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"ImagesViewImageCell" forIndexPath:indexPath];
+    
+    //cell.backgroundColor = [UIColor clearColor];
+    //UIImage *image = [UIImage imageNamed:@"a.jpg"];
+    //cell.cellImage.image = image;
     
     return cell;
 }
 
 
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    /*
     Snap *s = [self.mySnaps objectAtIndex:indexPath.row];
     
     SingleImageViewController *singleImageVc = [SingleImageViewController new];
@@ -129,25 +162,27 @@
     singleImageVc.profile = self.profile;
     
     [self presentViewController:singleImageVc animated:YES completion:nil];
+     */
 }
 
 - (void)getSnapImagesCallBack:(NSArray *)objects error:(NSError *)error {
     
     if(!error){
         
-        NSLog(@"numObjects: %d", [objects count]);
+        NSLog(@"objects count: %d", objects.count);
+        NSLog(@"currentPage: %d", currentPage);
         
         for(int i = 0; i < [objects count]; i++){
             
-            Snap *s = [Snap new];
-            s.title = objects[i][@"title"];
-            s.description = objects[i][@"description"];
-            s.numCookies = [objects[i][@"numCookies"] intValue];
-            s.publisherUsername = objects[i][@"publisherUsername"];
-            //s.parseObjectId = [objects[i] objectId];
-            s.snapPFObject = objects[i];
+            int index = NUM_CELLS_PER_PAGE*currentPage + i;
             
-            [self.mySnaps addObject: s];
+            PFObject *o = objects[i];
+            Snap *s = self.mySnaps[index];
+            s.title =o[@"title"];
+            s.description = o[@"description"];
+            s.numCookies = [o[@"numCookies"] intValue];
+            s.publisherUsername = o[@"publisherUsername"];
+            s.snapPFObject = o;
             
             PFFile *imageFile = objects[i][@"imageFile"];
             
@@ -156,13 +191,16 @@
                 if(!error){
                     UIImage *image = [UIImage imageWithData:data];
                     s.snapImage = image;
-                    [self.collectionView reloadData];
-                    
+                    //[self.collectionView reloadData];
+                    NSIndexPath *ip = [NSIndexPath indexPathForItem:index inSection:0];
+                    [self.collectionView reloadItemsAtIndexPaths:@[ip]];
                 }else{
                     NSLog(@"couln't retrieve image: %@", [error localizedDescription]);
                 }
             }];
         }
+        
+        currentPage++;
         
     }else{
         NSLog(@"error retrieving images: %@", [error localizedDescription]);
